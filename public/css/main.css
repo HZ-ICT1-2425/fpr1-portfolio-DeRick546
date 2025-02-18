@@ -1,0 +1,72 @@
+.footer{
+    background-color: rgb(51, 51, 51) !important;
+}
+.bladeChaos{
+    position: relative;
+    top: 45px;
+    left: 880px;
+    width: 330px;
+    rotate: -43deg;
+}
+.bladeChaos2{
+    position: absolute;
+    top: 700px;
+    left: 900px;
+    rotate: 43deg;
+    transform: scaleX(-1);
+    width: 330px;
+}
+.elden{
+    display: block;
+    border-width: 4px;
+    border-style: solid!important;
+    height: 150%;
+    width: 150%;
+    margin: 2px;
+    border-color: #0b0b0e!important;
+}
+* {box-sizing: border-box}
+
+.eldenBox {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+}
+.overlay {
+    position: absolute;
+    bottom: 0px;
+    width: 150%;
+    height: 40%;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    padding: 15px;
+    margin: 2px;
+}
+
+ input[type="text"], input[type="button"] {
+     padding: 10px;
+     margin: 5px;
+     font-size: 18px;
+ }
+
+.purplePallet{
+    position: absolute;
+    height: 440px;
+    top: 325px;
+    left: 70px;
+}
+#linkInWelcome{
+    outline-color: #0864ed;
+    outline-style: outset;
+    width: max-content;
+    padding: 4px 4px !important;
+    display: block;
+}
+.block{
+    margin: 5px;
+}
+
