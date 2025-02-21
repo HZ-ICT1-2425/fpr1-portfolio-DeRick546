@@ -15,6 +15,7 @@ class Main extends Component
     public array $navItems = [
         ['route' => 'home', 'title' => 'Home'],
         ['route' => 'about', 'title' => 'About'],
+        ['route' => 'dashboard.index', 'title' => 'Dashboard'],
         ['route' => 'posts.index', 'title' => 'Blog'],
         ['route' => 'projects.index', 'title' => 'FAQ'],
         ['route' => 'tasks.index', 'title' => 'Tasks'],

@@ -16,5 +16,8 @@
     </div>
     @foreach($posts as $post)
         <x-post.list-item :post="$post"></x-post.list-item>
+        @foreach($post->comments as $comment)
+            <p>{!! $comment->content !!}</p>
+        @endforeach
     @endforeach
 </x-layout.main>

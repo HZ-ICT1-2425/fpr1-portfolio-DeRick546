@@ -15,17 +15,16 @@
 <body>
 {{-- Navigation bar --}}
 <x-ui.navbar>
-    <x:slot:brand>
-        <a href="/" class="navbar-item">
-            <i class="fa-solid fa-list-check"></i>&nbsp;TaskITEasy
-        </a>
-    </x:slot:brand>
-
+    <x:slot:brand></x:slot:brand>
     @foreach($navItems as $navItem)
         <x-ui.navbar-item :route="$navItem['route']">{{ $navItem['title'] }}</x-ui.navbar-item>
     @endforeach
 </x-ui.navbar>
+<br>
 <footer class="footer">
+    <a href="{{ url()->previous() }}" class="button is-info" style="position: fixed; z-index: 190"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+        </svg>Back</a>
     <div class="container">
         <div class="column has-text-centered">
             @foreach($navItems as $navItem)
@@ -36,6 +35,40 @@
         </div>
     </div>
 </footer>
+<aside id="sidebar" class="sidebar">
+    <br>
+    <br>
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+    <a href="https://hz.osiris-student.nl/home" target="_blank">Hz-student</a>
+    <a href="https://www.w3schools.com/" target="_blank">W3schools</a>
+    <a href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2023-2024/Juli/OER-HZ-Bacheloropleidingen-voltijd-2023-2024-DEF-versie-20240412.pdf" target="_blank">Onderwijs- en
+        examenregeling HZ</a>
+    <a href="https://github.com/HZ-HBO-ICT" target="blank">Github van HBO-ICT</a>
+    <a href="https://hz.osiris-student.nl/voortgang" target="_blank" >Studie progress</a>
+    <a href="https://laravel.com/docs/11.x/readme" target="_blank" >Laravel documentation</a>
+</aside>
+<script>
+    let active = 0;
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const mainContent = document.querySelector(".main-content");
+        active = active + 1;
+        // Toggle the open class for the sidebar
+        sidebar.classList.toggle("open");
+        if(active % 2){
+            document.getElementById("buttonAsideMenu").innerHTML = "Close menu";
+
+        }else{
+            document.getElementById("buttonAsideMenu").innerHTML = "Open menu";
+        }
+        // Toggle the shift class for the main content
+        mainContent.classList.toggle("shift");
+        console.log(active);
+    }
+</script>
+<div class="main-content">
+    <button id="buttonAsideMenu"  class="button is-primary" onclick="toggleSidebar()">Open menu</button>
+</div>
 {{-- Content --}}
 <section class="section">
     <div class="container">

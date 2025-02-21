@@ -1,5 +1,7 @@
 
 <x-layout.main>
+    <div class="columns is-centered">
+        <div class="column is-half">
             <div class="block">
                 <script>
                     // Convert Decimal to Binary and Hexadecimal
@@ -23,7 +25,8 @@
                             let decimalValue = parseInt(hexValue, 16);
                             let binaryValue = decimalValue.toString(2);
                             document.getElementById('results').innerHTML = `Hexadecimal: ${hexValue.toUpperCase()}<br>Decimal: ${decimalValue}<br>Binary: ${binaryValue}`;
-                        } else {
+                        }
+                        else {
                             document.getElementById('results').innerHTML = "Please enter a valid hexadecimal number.";
                         }
                     }
@@ -44,8 +47,8 @@
                 </script>
                 <div>
                     <label for="decimalInput" class="label">Decimal:</label>
-                    <div class="control has-icons-right">
-                        <input type="text" name="decimalInput" id="decimalInput" placeholder="Enter Decimal"
+                    <div class="control has-icons-right is-display-flex ">
+                        <input type="text" name="decimalInput" id="decimalInput" placeholder="Enter Decimal..."
                                class="input @error('decimalInput') is-danger @enderror"
                                value="{{ old('decimalInput') }}" autocomplete="decimalInput" autofocus>
                         <input type="button" value="Convert" onclick="convertDecimal()" class="button is-primary">
@@ -55,12 +58,10 @@
                     </span>
                         @enderror
                     </div>
-                </div>
-{{--                <img src="fotos/binairepuzzel.png" alt="binairepuzzel" class="binairepuzzel">--}}
-                <div>
+              <br>
                     <label for="hexInput" class="label">Hexadecimal:</label>
-                    <div class="control has-icons-right">
-                        <input type="text" name="hexInput" id="hexInput" placeholder="Enter Hexadecimal"
+                    <div class="control has-icons-right is-display-flex">
+                        <input type="text" name="hexInput" id="hexInput" placeholder="Enter Hexadecimal..."
                                class="input @error('hexInput') is-danger @enderror"
                                value="{{ old('hexInput') }}" autocomplete="hexInput" autofocus>
                         <input type="button" value="Convert" onclick="convertHex()" class="button is-primary">
@@ -70,13 +71,10 @@
                     </span>
                         @enderror
                     </div>
-                </div>
-{{--                <img src="fotos/purplePallet.png" alt="purple-Pallet" class="purplePallet">--}}
-
-                <div>
+                    <br>
                     <label for="binaryInput" class="label">Binary:</label>
-                    <div class="control has-icons-right">
-                        <input type="text" name="binaryInput" id="binaryInput" placeholder="Enter Binary"
+                    <div class="control has-icons-right is-display-flex">
+                        <input type="text" name="binaryInput" id="binaryInput" placeholder="Enter Binary..."
                                class="input @error('binaryInput') is-danger @enderror"
                                value="{{ old('binaryInput') }}" autocomplete="binaryInput" autofocus>
                         <input type="button" value="Convert" onclick="convertBinary()" class="button is-primary">
@@ -87,8 +85,10 @@
                         @enderror
                     </div>
                 </div>
-
+                <br>
                 <h1 class="label">Results</h1>
                 <p id="results"></p>
                 </div>
+        </div>
+    </div>
     </x-layout.main>

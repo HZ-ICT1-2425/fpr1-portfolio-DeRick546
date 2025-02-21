@@ -1,4 +1,4 @@
-<nav class="navbar is-primary has-text-white" role="navigation" aria-label="main navigation">
+<nav class="navbar is-primary has-text-white navbar is-fixed-top" aria-label="main navigation" style="z-index: 50000">
     <div class="container">
         <div class="navbar-brand">
             {{-- the slot for the brand logo --}}

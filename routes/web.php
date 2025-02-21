@@ -5,6 +5,8 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('tasks', TaskController::class);
 Route::resource('posts', PostController::class);
 Route::resource('projects', ProjectController::class);
+Route::resource('dashboard', DashboardController::class);
 
 /*
  * Route that shows the about page. This handler just returns the about view.

@@ -34,8 +34,8 @@
 }
 .overlay {
     position: absolute;
-    bottom: 0px;
-    width: 150%;
+    bottom: -1%;
+    width: 100%;
     height: 40%;
     opacity: 0;
     color: white;
@@ -46,18 +46,8 @@
     padding: 15px;
     margin: 2px;
 }
-
- input[type="text"], input[type="button"] {
-     padding: 10px;
-     margin: 5px;
-     font-size: 18px;
- }
-
-.purplePallet{
-    position: absolute;
-    height: 440px;
-    top: 325px;
-    left: 70px;
+.eldenBox:hover .overlay {
+    opacity: 1;
 }
 #linkInWelcome{
     outline-color: #0864ed;
@@ -69,4 +59,52 @@
 .block{
     margin: 5px;
 }
-
+.sidebar {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: -260px;
+    background-color: rgb(90, 90, 90);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 200;
+}
+.sidebar a {
+    padding: 10px 15px;
+    font-size: 24px;
+    color: #000000;
+    display: block;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.close-btn {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#buttonAsideMenu{
+    z-index: 100!important;
+    position: relative;
+}
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+.sidebar.open {
+    left: 0;
+}
+.main-content.shift {
+    margin-left: 260px;
+}
+a:-webkit-any-link {
+    text-decoration: none!important;
+}
+td:hover,th:hover {background-color: #1f1f1f!important;
+}
