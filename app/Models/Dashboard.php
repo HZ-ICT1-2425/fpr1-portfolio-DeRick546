@@ -20,9 +20,5 @@ class Dashboard extends Model
     public function tasks(): HasMany
     {
         return $this->hasMany(Task::class);
-
     }
 }
-
-
-
