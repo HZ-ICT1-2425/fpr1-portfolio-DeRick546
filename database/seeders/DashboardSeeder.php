@@ -126,7 +126,7 @@ class DashboardSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach($this->data as $item) {
+        foreach ($this->data as $item) {
             Dashboard::create($item);
         }
     }

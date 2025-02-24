@@ -16,7 +16,7 @@ class TaskSeeder extends Seeder
             'state' => 'new',
             'time_estimated'=> 15,
             'time_spent' => 0,
-            'completed_at' => NULL
+            'completed_at' => null
         ],
         [
             'title' => 'Have a debate with a coding error',
@@ -34,7 +34,7 @@ class TaskSeeder extends Seeder
             'state' => 'in progress',
             'time_estimated'=> 30,
             'time_spent' => 4,
-            'completed_at' => NULL
+            'completed_at' => null
         ],
         [
             'title' => 'Create a Migration for your sock drawer',
@@ -52,7 +52,7 @@ class TaskSeeder extends Seeder
             'state' => 'in progress',
             'time_estimated'=> 45,
             'time_spent' => 37,
-            'completed_at' => NULL
+            'completed_at' => null
         ],
         [
             'title' => 'Laravel Task Scheduler Challenge',
@@ -61,7 +61,7 @@ class TaskSeeder extends Seeder
             'state' => 'on hold',
             'time_estimated'=> 20,
             'time_spent' => 0,
-            'completed_at' => NULL
+            'completed_at' => null
         ]
     ];
 
@@ -70,7 +70,7 @@ class TaskSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach($this->data as $item) {
+        foreach ($this->data as $item) {
             Task::create($item);
         }
     }

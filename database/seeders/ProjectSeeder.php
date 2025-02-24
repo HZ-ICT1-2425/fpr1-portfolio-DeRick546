@@ -37,7 +37,7 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach($this->data as $item) {
+        foreach ($this->data as $item) {
             Project::create($item);
         }
     }
