@@ -42,7 +42,7 @@ class Task extends Model
     public function progress(): Attribute
     {
         return Attribute::make(
-            get: function() {
+            get: function () {
                 // Prevent divide by zero errors
                 if ($this->time_estimated == 0)
                     return 0;
