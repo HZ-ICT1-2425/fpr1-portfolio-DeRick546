@@ -1,138 +1,64 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-layout.main>
+    <div class="navbar">
+        <div class="navbar-start">
+            <div class="block">
+                <h2 class="title is-4">Waarom de ICT?</h2>
 
-    <title>HZ HBO-ICT</title>
+                    <p>Ik heb voor de HBO-ICT gekozen omdat ik heel veel houd van games en computer dus ik dacht dat de ICT
+                        hier een
+                        goede aansluiting op was en ik hoop dat de ICT veel leuke en nieuwe inzichten bied in de wereld van
+                        computers
+                        en games.</p>
+                    <p>Ik heb ook voor de ICT gekozen omdat ik voor de hz ook nog informatica als vak heb gehad en dat was
+                        een soort
+                        van ICT en ik vond het heel leuk om oplossingen voor bedrijven te bedenken en maken.</p>
+                    <p>Ik vind ook dat ICT heel complex lijkt wat ervoor zorgt dat mijn familie er veel tegenop kijkt. Ik
+                        vind het
+                        ook wel leuk om over mijn super complexe studie op te scheppen ook als het daadwerklijk niet zo
+                        super complex
+                        is maar wel zo lijkt. </p>
 
-    {{-- Compiled assets --}}
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
-{{-- Navigation bar --}}
-<nav class="navbar is-primary  has-text-white" >
-    <div class="container">
-        <div class="navbar-brand">
-            <a href="/" class="navbar-item">
-                <strong><i class="fas fa-graduation-cap"></i> HZ</strong>
-            </a>
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu" id="navMenu">
-            <div class="navbar-start">
-                <a href="{{ route('home') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'home' ? "is-active" : "" }}">
-                    Home
-                </a>
             </div>
-        </div>
-    </div>
-</nav>
+            <div class="block">
+                <h2 class="title is-4">Wat ik tot nu toe van de HBO-ICT vind.</h2>
 
-{{-- Content --}}
-<section class="hero  is-medium  is-bold is-primary">
-    <div class="hero-body" style="
-            background: url('https://www.hz.nl/imager/uploads/images/3.-Werk-en-studie/Headers/docent-coacht-studenten-003_c8fa470484be7b69be5daae77a1602c5.jpg') no-repeat center center;
-            background-size: cover;"
-    ></div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="columns">
-
-            <div class="column is-8-desktop is-12-tablet">
-
-                <div class="content">
-                    <h1>Welcome to the HZ HBO-ICT template app.</h1>
                     <p>
-                        Posuere porttitor natoque velit duis penatibus fermentum dignissim ut? Vel vel mi purus
-                        tempor nec conubia platea venenatis. Mauris pharetra auctor magnis, vehicula integer risus
-                        taciti gravida semper fames! Eu fermentum lorem accumsan litora. Consequat dapibus interdum
-                        primis lorem. Convallis integer mi suscipit tempor. Ad tincidunt placerat at. Sagittis
-                        pulvinar consectetur commodo, placerat varius sociosqu egestas felis! Curae; dictumst porta
-                        tempus. Nisi nec morbi netus euismod egestas proin sed tempor. Nam feugiat ante ante.
-                        Conubia vehicula tincidunt facilisis quisque risus senectus convallis. Eget at feugiat vel
-                        nisi. Tortor, facilisis neque elementum ultricies blandit amet orci dictumst eu mi molestie.
-                        Libero vulputate porta proin volutpat suspendisse aenean aenean facilisi ut primis!
-                        Venenatis elementum auctor neque urna et facilisis vulputate erat lorem habitasse libero!
-                        Risus ornare quam rutrum praesent blandit congue aliquet mauris.
-                    </p>
-                    <p>
-                        Elementum orci eget vel adipiscing tempor malesuada? Sollicitudin euismod nunc feugiat
-                        accumsan accumsan condimentum nulla pellentesque sagittis habitasse suspendisse praesent?
-                        Lectus proin justo vulputate tristique duis metus, est pellentesque blandit quam pharetra.
-                        Maecenas tincidunt litora mauris mollis ornare dictum nec placerat lectus massa lobortis
-                        auctor. Hac feugiat dolor, ac ridiculus mi adipiscing aptent elementum suspendisse augue
-                        rutrum! Habitasse a consequat ornare dictumst integer dis porta.
-                    </p>
-                    <p>
-                        Blandit mollis felis gravida sem ad venenatis ut a lacus! Magna odio netus, torquent rhoncus
-                        fames velit. Adipiscing libero, class cursus ipsum penatibus enim mollis netus. Sociis
-                        luctus eros sapien platea parturient fringilla. Senectus purus tincidunt laoreet purus
-                        praesent. Accumsan pulvinar tincidunt gravida malesuada senectus proin, elit cubilia
-                        lobortis quisque tellus? Torquent dis natoque sapien natoque sagittis conubia pulvinar risus
-                        elementum hac adipiscing arcu. Sem nisl fusce phasellus adipiscing pretium eget hendrerit
-                        proin non. Vestibulum lacus magna, commodo volutpat.
-                    </p>
-                    <p>
-                        Vivamus ridiculus amet arcu. Magnis venenatis vehicula venenatis molestie molestie proin sed
-                        blandit, inceptos volutpat. Auctor auctor massa sodales ipsum. Congue est quisque porta?
-                        Porta phasellus sem torquent ad feugiat sollicitudin nisi tempor tortor habitasse. Eros
-                        condimentum enim blandit pulvinar. Justo aenean, taciti curae; diam volutpat cubilia ante
-                        vestibulum. Augue penatibus phasellus inceptos tortor convallis ridiculus at ad. Nisl
-                        curabitur vel gravida, montes sit velit pellentesque. Sem, dapibus maecenas urna lectus
-                        mauris quisque nibh accumsan amet curabitur egestas dolor. Sagittis montes magnis quam
-                        fringilla accumsan bibendum. Nisl, a laoreet himenaeos sapien lorem quisque taciti lacus
-                        elit mauris. Mollis eleifend montes commodo? Accumsan nullam venenatis malesuada netus metus
-                        sociosqu magnis velit. Rhoncus lacus tempus praesent fermentum netus ullamcorper dolor
-                        integer nulla.
-                    </p>
-                    <p>
-                        Habitasse suspendisse egestas vestibulum pellentesque per leo enim metus donec ad. Hac metus
-                        convallis nibh eget, parturient dis elementum posuere. Felis, ultricies fusce est cubilia
-                        facilisis odio id velit dapibus suspendisse. Erat praesent nullam aliquam. Rutrum commodo
-                        eget malesuada per montes, curae; senectus convallis sociis per. Risus mattis justo vivamus
-                        lorem bibendum aenean eleifend facilisi, suscipit consectetur libero litora. Interdum?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- Footer --}}
-<footer class="footer">
-    <div class="container">
-        <div class="columns is-multiline">
-
-            <div class="column has-text-centered">
-                <div>
-                    <a href="/" class="link">Home</a>
-                </div>
+                        Ik vind de studie heel leuk omdat ik goede lessen heb en leuke vrienden en sinds dat ik op het
+                        ICT-programma
+                        zit heb ik al veel geleerd en docenten en studenten. Ik vind ook de vrijheid van de studie heel fijn
+                        omdat en
+                        ervoor zorgt dat ik gemakkelijk op mijn eigen manier kan werken zonder veel lessen en ik vind het
+                        ook een
+                        fijne verandering tegenover het middelbaar.</p>
+                    <p> Ik heb echter wel een opmerking over de studie namelijk dat er slecht gecommuniceert word naar
+                        studenten
+                        omdat ik ook van andere studies hoor dat ze geen idee hebben van wat ze moeten doen en bij mijn
+                        eigen
+                        studie(ICT) merk ik ook dat er een slechte communicatie is tussen student en docent omdat er steeds
+                        dingen
+                        veranderen en verkeert geïnterpreteert worden.</p>
+                    <p>Maar er zijn ook goeie dingen namelijk: deze websites hieronder die mij super goed helpen bij het
+                        reizen en
+                        met mijn huiswerk te maken.</p>
+                    <ol id="linkInWelcome">
+                        <li> <a href="https://hz.nl" target="blank"> HZ University of Applied Sciences </a> </li>
+                        <li> <a href="https://github.com/DeRick546/DeRick546" target="blank"> Mijn github account </a> </li>
+                    </ol>
             </div>
 
-            <div class="column has-text-centered">
-                <div>
-                    <a href="https://opensource.org/licenses/MIT" class="link">
-                        <i class="fa fa-balance-scale" aria-hidden="true"></i> License: MIT
-                    </a>
-                </div>
             </div>
+            <div class="block">
+                <h2 class="title is-4">Wat wil ik na de ICT?</h2>
 
+                    <p>Ik wil later na mijn studie ook een goede baan als programmeur omdat dat een goed betaalde baan is en
+                        het
+                        geeft ook een zekerheid omdat er veel werk voor is.</p>
+                    <p>Ik ben later ook van plan om mijn eigen game te maken en daarvoor studeer ik ook HBO-ICT zodat ik die
+                        kennis
+                        heb omdat het maken van een game als hobby heel leuk lijkt. Ik ben daarom ook van plan om mijn minor
+                        in kunst
+                        te doen zodat ik ook een mooie game kan maken naar mijn eigen ideeën.</p>
+
+            </div>
         </div>
-
-        <div class="content is-small has-text-centered">
-            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a> | adapted by <a href="https://github.com/dwaard">BugSlayer</a></p>
-            <p>PROJECT FOOTER HERE</p>
-        </div>
-    </div>
-</footer>
-
-</body>
-</html>
+</x-layout.main>
