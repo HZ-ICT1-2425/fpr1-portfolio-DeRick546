@@ -26,7 +26,10 @@ class Task extends Model
         return $this->belongsTo(Project::class);
     }
 
-    public function complete()
+    /**
+     * @return void
+     */
+    public function complete(): void
     {
         $this->state = 'completed';
         $this->completed_at = Carbon::now();
@@ -44,9 +47,9 @@ class Task extends Model
         return Attribute::make(
             get: function () {
                 // Prevent divide by zero errors
-                if ($this->time_estimated == 0)
+                if ($this->time_estimated == 0) {
                     return 0;
-
+                }
                 return number_format(100 * $this->time_spent / $this->time_estimated, 0);
             }
         );
@@ -61,12 +64,12 @@ class Task extends Model
     public function pace(): Attribute
     {
         return Attribute::make(
-            get: function() {
+            get: function () {
                 $progress = $this->progress;
 
-                if ($progress == 0)
+                if ($progress == 0) {
                     return null;
-
+                }
                 $time = now()->diffInMinutes($this->created_at);
 
                 return $time / $progress;
@@ -83,12 +86,12 @@ class Task extends Model
     public function getExpectCompletedAt(): Attribute
     {
         return Attribute::make(
-            get: function() {
+            get: function () {
                 $pace = $this->pace;
 
-                if ($pace == null)
+                if ($pace == null) {
                     return null;
-
+                }
                 return now()->addMinutes($pace * (100 - $this->progress));
             }
         );
