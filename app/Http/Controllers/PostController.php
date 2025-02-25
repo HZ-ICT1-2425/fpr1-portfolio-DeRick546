@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -41,6 +42,7 @@ class PostController extends Controller
         // the validated data and store it to the database
         $post = Post::create($validated);
 
+//        $comment = Comment::create($validated);
         // Redirect to the blog index page
         return redirect()->route('posts.index');
     }
@@ -79,6 +81,8 @@ class PostController extends Controller
 
         // Use `update` to mass (re)assign updated attributes
         $post->update($validated);
+
+//        $comment = Comment::update($validated);
 
         // Redirect to the blog show page
         return redirect()->route('posts.show', $post)

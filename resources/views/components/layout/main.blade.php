@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{asset('img/sword.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('img/icon.png')}}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href='{{asset('css/main.css')}}'>
     <title>HZ HBO-ICT_Portfolio</title>
 
