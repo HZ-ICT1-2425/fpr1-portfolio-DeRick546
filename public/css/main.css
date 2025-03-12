@@ -23,7 +23,7 @@
     height: 150%;
     width: 150%;
     margin: 2px;
-    border-color: #9B1C31!important;
+    border-color: #f1f1f1!important;
 }
 * {box-sizing: border-box}
 
@@ -50,7 +50,7 @@
     opacity: 1;
 }
 #linkInWelcome{
-    outline-color: #9B1C31;
+    outline-color: #9B1C31!important;
     outline-style: outset;
     width: max-content;
     padding: 4px 4px !important;
@@ -115,8 +115,3 @@ td:hover,th:hover {background-color: #1f1f1f!important;
 .is-danger, .is-warning{
     background-color: #9B1C31!important;
 }
-/*
-#6dbfb8 green
-#9B1C31 red
-#1a202c navy
-*/

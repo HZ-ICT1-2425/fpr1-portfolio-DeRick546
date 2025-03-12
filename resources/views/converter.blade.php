@@ -51,7 +51,7 @@
                         <input type="text" name="decimalInput" id="decimalInput" placeholder="Enter Decimal..."
                                class="input @error('decimalInput') is-danger @enderror"
                                value="{{ old('decimalInput') }}" autocomplete="decimalInput" autofocus>
-                        <input type="button" value="Convert" onclick="convertDecimal()" class="button is-primary">
+                        <input type="button" value="Convert" onclick="convertDecimal()" class="button is-primary" style="background-color: #010232!important;">
                         @error('decimalInput')
                         <span class="icon has-text-danger is-small is-right">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -64,7 +64,7 @@
                         <input type="text" name="hexInput" id="hexInput" placeholder="Enter Hexadecimal..."
                                class="input @error('hexInput') is-danger @enderror"
                                value="{{ old('hexInput') }}" autocomplete="hexInput" autofocus>
-                        <input type="button" value="Convert" onclick="convertHex()" class="button is-primary">
+                        <input type="button" value="Convert" onclick="convertHex()" class="button is-primary" style="background-color: #010232!important;">
                         @error('hexInput')
                         <span class="icon has-text-danger is-small is-right">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -77,7 +77,7 @@
                         <input type="text" name="binaryInput" id="binaryInput" placeholder="Enter Binary..."
                                class="input @error('binaryInput') is-danger @enderror"
                                value="{{ old('binaryInput') }}" autocomplete="binaryInput" autofocus>
-                        <input type="button" value="Convert" onclick="convertBinary()" class="button is-primary">
+                        <input type="button" value="Convert" onclick="convertBinary()" class="button is-primary" style="background-color: #010232!important;">
                         @error('binaryInput')
                         <span class="icon has-text-danger is-small is-right">
                         <i class="fas fa-exclamation-triangle"></i>
