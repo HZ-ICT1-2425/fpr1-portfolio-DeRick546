@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{asset('img/sword.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('img/icon.png')}}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href='{{asset('css/main.css')}}'>
     <title>HZ HBO-ICT_Portfolio</title>
 
@@ -22,7 +22,7 @@
 </x-ui.navbar>
 <br>
 <footer class="footer">
-    <a href="{{ url()->previous() }}" class="button is-info" style="position: fixed; z-index: 190"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <a href="{{ url()->previous() }}" class="button is-info" style="position: fixed; z-index: 190; color: white!important"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
         </svg>Back</a>
     <div class="container">
